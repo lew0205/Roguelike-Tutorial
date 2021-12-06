@@ -6,6 +6,12 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed;
     private Vector2 direction;
+    private Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -16,6 +22,15 @@ public class PlayerMovement : MonoBehaviour
     private void Move()
     {
         transform.Translate(direction * speed * Time.deltaTime);
+
+        if (direction.x != 0 || direction.y != 0)
+        {
+            SetAnimatorMovement(direction);
+        }
+        else
+        {
+            animator.SetLayerWeight(1, 0);
+        }
     }
 
     private void TakeInput()
@@ -39,5 +54,12 @@ public class PlayerMovement : MonoBehaviour
             direction += Vector2.right;
         }
 
+    }
+
+    private void SetAnimatorMovement(Vector2 direction)
+    {
+        animator.SetLayerWeight(1, 1);
+        animator.SetFloat("xDir", direction.x);
+        animator.SetFloat("yDir", direction.y);
     }
 }
