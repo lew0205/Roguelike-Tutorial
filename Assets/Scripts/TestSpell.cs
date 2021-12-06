@@ -7,7 +7,7 @@ public class TestSpell : MonoBehaviour
     public GameObject projectile; // 투사체 오브젝트
     public float minDamage; // 최소 데미지
     public float maxDamage; // 최대 데미지
-    public float projectileForce; // 투사체 속도인듯?
+    public float projectileForce; // 투사체 속도
 
     private void Update()
     {
@@ -18,7 +18,7 @@ public class TestSpell : MonoBehaviour
             Vector2 myPos = transform.position; // 캐릭터 위치
             Vector2 direction = (mousePos - myPos).normalized; // 투사체 발사 방향
             spell.GetComponent<Rigidbody2D>().velocity = direction * projectileForce; // 방향으로 투사체 속도로 발사
-            spell.GetComponent<TestProjectile>().damage = Random.Range(minDamage, maxDamage);
+            spell.GetComponent<TestProjectile>().damage = Random.Range(minDamage, maxDamage); // 투사체의 데미지를 최소 데미지에서 최대 데미지 사이로 설정
         }
     }
 }
