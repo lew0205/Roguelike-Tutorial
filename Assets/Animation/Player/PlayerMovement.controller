@@ -111,6 +111,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 3
     m_ConditionEvent: xDir
     m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: yDir
+    m_EventTreshold: -1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3461406929970720407}
   m_Solo: 0
@@ -196,6 +199,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: yDir
     m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: xDir
+    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4550116935216567248}
   m_Solo: 0
@@ -381,6 +387,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 3
     m_ConditionEvent: yDir
     m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: xDir
+    m_EventTreshold: -1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3807127495310933171}
   m_Solo: 0
@@ -406,6 +415,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 3
     m_ConditionEvent: xDir
     m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: yDir
+    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3461406929970720407}
   m_Solo: 0
@@ -527,6 +539,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: xDir
     m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: yDir
+    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5322153179268341791}
   m_Solo: 0
@@ -538,7 +553,7 @@ AnimatorStateTransition:
   m_ExitTime: 0
   m_HasExitTime: 0
   m_HasFixedDuration: 0
-  m_InterruptionSource: 0
+  m_InterruptionSource: 1
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
 --- !u!1101 &1382187474798096815
@@ -660,6 +675,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: xDir
     m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: yDir
+    m_EventTreshold: -1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5322153179268341791}
   m_Solo: 0
@@ -901,6 +919,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: yDir
     m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: xDir
+    m_EventTreshold: -1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4550116935216567248}
   m_Solo: 0
@@ -926,6 +947,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 3
     m_ConditionEvent: yDir
     m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: xDir
+    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3807127495310933171}
   m_Solo: 0
