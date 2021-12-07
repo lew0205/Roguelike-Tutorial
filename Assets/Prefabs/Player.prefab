@@ -162,4 +162,4 @@ MonoBehaviour:
   projectile: {fileID: 1471200185429100886, guid: 3055016ac7c22974bb5f5b0608917563, type: 3}
   minDamage: 20
   maxDamage: 30
-  projectileForce: 5
+  projectileForce: 10
