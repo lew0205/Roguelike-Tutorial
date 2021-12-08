@@ -10,6 +10,10 @@ public class TestEnemyProjectile : MonoBehaviour
     {
         if (collision.tag!="Enemy") // 자기자신을 제외하고 부딪힌다면
         {
+            if (collision.tag == "Player")
+            {
+                PlayerStats.playerStats.DealDamage(damage);
+            }
             Destroy(gameObject); // 투사체 파괴
         }
     }

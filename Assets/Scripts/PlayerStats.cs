@@ -15,13 +15,13 @@ public class PlayerStats : MonoBehaviour
     {
         if(playerStats!=null)
         {
-            Destroy(playerStats);
+            Destroy(playerStats); // 플레이어 스탯이 중복되면 안되므로 게임 시작 시 기존에 스텟이 있다면 기존의 스텟을 삭제한다.
         }
         else
         {
             playerStats = this;
         }
-        DontDestroyOnLoad(this);
+        DontDestroyOnLoad(this); // 씬이 바뀌어도 파괴되지 않게 한다.
     }
 
     void Start()
@@ -37,8 +37,8 @@ public class PlayerStats : MonoBehaviour
 
     public void HealCharacter(float heal)
     {
-        health += heal;
-        CheckOverheal();
+        health += heal; // 체력에서 회복량만큼 추가
+        CheckOverheal(); // 회복된 체력이 최대체력보다 큰지 확인
     }
 
     private void CheckOverheal()
