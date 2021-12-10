@@ -560,8 +560,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1471200185429100886, guid: 96d07629ca9c6574fbe5217ba92d89cf, type: 3}
-  player: {fileID: 5587269415127059939, guid: 974d6450f611d1c47b60d8d67fa2230e, type: 3}
+  player: {fileID: 0}
   minDamage: 20
   maxDamage: 30
   projectileForce: 5
-  cooldown: 4
+  cooldown: 2
