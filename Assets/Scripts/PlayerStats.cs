@@ -66,6 +66,7 @@ public class PlayerStats : MonoBehaviour
     {
         if (health <= 0) // 체력이 0보다 적으면
         {
+            health = 0;
             Destroy(player); // 적 파괴
         }
     }
