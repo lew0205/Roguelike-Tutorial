@@ -44,15 +44,14 @@ public class PlayerStats : MonoBehaviour
     {
         health -= damage; // 체력에서 데미지만큼 감소
         CheckDeath(); // 죽었는지 확인
-        healthSlider.value = CalculateHealthPercentage();
-        healthText.text = Mathf.Ceil(health) + "/" + Mathf.Ceil(maxHealth);
+        SetHealthUI();
     }
 
     public void HealCharacter(float heal)
     {
         health += heal; // 체력에서 회복량만큼 추가
         CheckOverheal(); // 회복된 체력이 최대체력보다 큰지 확인
-        healthSlider.value = CalculateHealthPercentage();
+        SetHealthUI();
     }
 
     private void CheckOverheal()
@@ -74,5 +73,10 @@ public class PlayerStats : MonoBehaviour
     private float CalculateHealthPercentage()
     {
         return (health / maxHealth);
+    }
+    private void SetHealthUI()
+    {
+        healthSlider.value = CalculateHealthPercentage();
+        healthText.text = Mathf.Ceil(health) + "/" + Mathf.Ceil(maxHealth);
     }
 }
