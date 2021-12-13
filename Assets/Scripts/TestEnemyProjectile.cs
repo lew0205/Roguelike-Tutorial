@@ -5,6 +5,12 @@ using UnityEngine;
 public class TestEnemyProjectile : MonoBehaviour
 {
     public float damage; // 데미지
+    public float pjTime = 4;
+
+    private void Awake()
+    {
+        StartCoroutine(BreakProjectile());
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,5 +22,11 @@ public class TestEnemyProjectile : MonoBehaviour
             }
             Destroy(gameObject); // 투사체 파괴
         }
+    }
+
+    IEnumerator BreakProjectile()
+    {
+        yield return new WaitForSeconds(pjTime);
+        Destroy(gameObject);
     }
 }
