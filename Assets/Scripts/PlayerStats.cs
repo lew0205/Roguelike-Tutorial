@@ -26,7 +26,7 @@ public class PlayerStats : MonoBehaviour
         }
         else
         {
-            playerStats = this;
+            playerStats = this; // 싱글톤 패턴이라나 뭐라나
         }
         DontDestroyOnLoad(this); // 씬이 바뀌어도 파괴되지 않게 한다.
     }

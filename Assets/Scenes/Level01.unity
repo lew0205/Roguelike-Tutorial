@@ -1097,7 +1097,7 @@ MonoBehaviour:
   health: 0
   maxHealth: 100
   stamina: 0
-  maxStamina: 0
+  maxStamina: 50
 --- !u!4 &1457674374
 Transform:
   m_ObjectHideFlags: 0
@@ -1251,7 +1251,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100/100
+  m_text: 0/0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f04729c3690f55f499535152bf1f8c79, type: 2}
   m_sharedMaterial: {fileID: -1023497562960037392, guid: f04729c3690f55f499535152bf1f8c79, type: 2}
@@ -1285,7 +1285,7 @@ MonoBehaviour:
   m_fontSizeMin: 10
   m_fontSizeMax: 100
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1386,7 +1386,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100/100
+  m_text: 0/0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f04729c3690f55f499535152bf1f8c79, type: 2}
   m_sharedMaterial: {fileID: -1023497562960037392, guid: f04729c3690f55f499535152bf1f8c79, type: 2}
@@ -1420,7 +1420,7 @@ MonoBehaviour:
   m_fontSizeMin: 10
   m_fontSizeMax: 100
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
