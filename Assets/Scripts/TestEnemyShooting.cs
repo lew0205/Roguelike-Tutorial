@@ -9,7 +9,9 @@ public class TestEnemyShooting : MonoBehaviour
     public float minDamage; // 최소 데미지
     public float maxDamage; // 최대 데미지
     public float projectileForce; // 투사체 속도
-    public float cooldown;
+    private float cooldown = 2;
+    public float minCooldown;
+    public float maxCooldown;
 
     private void Start()
     {
@@ -28,6 +30,7 @@ public class TestEnemyShooting : MonoBehaviour
             Vector2 direction = (targetPos - myPos).normalized;
             spell.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
             spell.GetComponent<TestEnemyProjectile>().damage = Random.Range(minDamage, maxDamage);
+            cooldown = Random.Range(minCooldown, maxCooldown);
             StartCoroutine(ShootingPlayer());
         }
     }
