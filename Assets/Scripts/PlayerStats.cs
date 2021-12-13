@@ -38,6 +38,10 @@ public class PlayerStats : MonoBehaviour
 
         health = maxHealth; // 게임이 시작하면 체력을 최대체력으로
         healthSlider.value = 1;
+        stamina = maxStamina; // 게임이 시작하면 기력을 최대기력으로
+        staminaSlider.value = 1;
+        SetHealthUI();
+        SetStaminaUI();
     }
 
     public void DealDamage(float damage)
@@ -75,9 +79,21 @@ public class PlayerStats : MonoBehaviour
     {
         return (health / maxHealth);
     }
+    
+    private float CalculateStaminaPercentage()
+    {
+        return (stamina / maxStamina);
+    }
+
     private void SetHealthUI()
     {
         healthSlider.value = CalculateHealthPercentage();
         healthText.text = Mathf.Ceil(health) + "/" + Mathf.Ceil(maxHealth);
+    }
+
+    private void SetStaminaUI()
+    {
+        staminaSlider.value = CalculateStaminaPercentage();
+        staminaText.text = Mathf.Ceil(stamina) + "/" + Mathf.Ceil(maxStamina);
     }
 }
