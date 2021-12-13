@@ -1,15 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
     public static PlayerStats playerStats; 
-
     public GameObject player;
+    public TextMeshProUGUI healthText;
+    public Slider healthSlider;
+    public TextMeshProUGUI staminaText;
+    public Slider staminaSlider;
 
     public float health; // 체력
     public float maxHealth; // 최대 체력
+    public float stamina;
+    public float maxStamina;
 
     private void Awake()
     {
@@ -26,19 +33,26 @@ public class PlayerStats : MonoBehaviour
 
     void Start()
     {
+        healthText.GetComponent<TextMeshProUGUI>();
+        staminaText.GetComponent<TextMeshProUGUI>();
+
         health = maxHealth; // 게임이 시작하면 체력을 최대체력으로
+        healthSlider.value = 1;
     }
 
     public void DealDamage(float damage)
     {
         health -= damage; // 체력에서 데미지만큼 감소
         CheckDeath(); // 죽었는지 확인
+        healthSlider.value = CalculateHealthPercentage();
+        healthText.text = Mathf.Ceil(health) + "/" + Mathf.Ceil(maxHealth);
     }
 
     public void HealCharacter(float heal)
     {
         health += heal; // 체력에서 회복량만큼 추가
         CheckOverheal(); // 회복된 체력이 최대체력보다 큰지 확인
+        healthSlider.value = CalculateHealthPercentage();
     }
 
     private void CheckOverheal()
@@ -55,5 +69,10 @@ public class PlayerStats : MonoBehaviour
         {
             Destroy(player); // 적 파괴
         }
+    }
+
+    private float CalculateHealthPercentage()
+    {
+        return (health / maxHealth);
     }
 }
