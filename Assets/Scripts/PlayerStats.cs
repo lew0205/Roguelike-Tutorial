@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -71,7 +72,7 @@ public class PlayerStats : MonoBehaviour
         if (health <= 0) // 체력이 0보다 적으면
         {
             health = 0;
-            Destroy(player); // 적 파괴
+            SceneManager.LoadScene("GameOver");
         }
     }
 
