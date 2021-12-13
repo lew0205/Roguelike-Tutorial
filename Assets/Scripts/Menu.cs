@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class Menu : MonoBehaviour
 {
 
     public GameObject settingsPanel;
@@ -27,5 +27,10 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Quitting..");
         Application.Quit();
+    }
+
+    public void ReturnGame()
+    {
+        SceneManager.LoadScene(0);
     }
 }
